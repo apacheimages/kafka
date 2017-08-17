@@ -35,4 +35,5 @@ RUN git clone https://github.com/ldaniels528/trifecta.git && \
 WORKDIR /opt/local
 RUN ln -s ${KAFKA_HOME} /opt/local/kafka 
 COPY supervisord.conf /etc/supervisord.conf
+EXPOSE 8888 9092 2181
 CMD ["/usr/bin/supervisord", "run"]
